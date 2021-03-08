@@ -55,9 +55,9 @@ class Game
   def get_player_code
     puts 'Type in 4 numbers from 1 to 6'
     input = gets.chomp
-    if input.length != 4 || input.split('').any? { |num| num.to_i > 6 || num.to_i < 1 }
+    while input.length != 4 || input.split('').any? { |num| num.to_i > 6 || num.to_i < 1 }
       puts 'Please enter valid number'
-      get_player_code
+      input = gets.chomp
     end
     @player_code = input.to_i
   end
