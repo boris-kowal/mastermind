@@ -90,7 +90,7 @@ class Game
     computer_code
     while @clue != %w[X X X X] && @count < 12
       get_player_code
-      @clue = compare_code(@player_code, @computer_code)
+      @clue = compare_code(@computer_code, @player_code)
       @count += 1
       print "#{@player_code} | #{@clue}\n"
     end
